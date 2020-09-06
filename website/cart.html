@@ -1,0 +1,58 @@
+
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TheWatchfaceCompany</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body bgcolor=#cee1ff>
+<!-- Header -->
+  <nav class="myheader">
+    <span class="logo"> Project By Japman Singh</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+	  <li><a href="#">Cart</a></li>
+	   <li><a href="login.php">Login/Register</a></li>
+      <li>Contact: info@thewatchfacecompany.co.in</li>
+    </ul>
+  </nav>
+
+<div class="shopping-cart">
+  <!-- Title -->
+  <div class="header">
+  <h1 style="background-color:white;">
+    The Watchface Company Cart
+	</h1>
+  </div>
+ 
+  <!-- Product #2 -->
+  
+	<div class="product">
+			<br>
+				<div class="photo">
+				<div class="image-container">
+				<a href="product.html">
+				<img src="media/fossil.jpg" alt="p2" style="width:100%" />
+				</a>
+				</div>
+				<span class="caption">Fossil FS4379</span>
+				<span class="caption"> <br> Rs 19,999 </span>
+				<br>
+				<a href="placed.php" class="button"><button type="button">Place Order</button></a>
+				</div>
+		</div>
+  
+    </div> 
+
+</div>
